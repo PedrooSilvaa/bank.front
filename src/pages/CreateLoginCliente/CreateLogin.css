@@ -1,0 +1,55 @@
+.containerLogon{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.containerLogon form{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    background-color: #4b4b4b;
+    color: #fff;
+    padding: 50px;
+    text-align: start;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.containerLogon form label input {
+    padding: 5px;
+    color: #a7a7a7;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px #fff solid;
+}
+
+.containerLogon form label input:focus{
+    outline: none;
+}
+
+.containerLogon form label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.submitLogon {
+    width: fit-content;
+    border: none;
+    background-color: #dadada;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 900;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px  ;
+    cursor: pointer;
+}   
