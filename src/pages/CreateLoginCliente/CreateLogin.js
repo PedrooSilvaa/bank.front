@@ -1,4 +1,4 @@
-import { PostNewClient } from '../../helpers/BankRequest'
+import { getContaByIdCliente, PostNewClient } from '../../helpers/BankRequest'
 import './CreateLogin.css'
 import { useState } from 'react'
 import { Navigate, NavLink} from 'react-router-dom';
@@ -28,14 +28,17 @@ const Logon = () => {
     try {
       const createCliente = await PostNewClient(newCliente);
       console.log('Cliente criado com sucesso:', createCliente);
-      setRedirect(true)
       // Limpar os campos após a criação do cliente
       setName("");
       setCpf("");
       setEmail("");
       setPhone("");
       setPassword("");
-    } catch (error) {
+
+      const getConta = await getContaByIdCliente(createCliente.id);
+      getConta ? alert(`Anote sua Conta e Agência \n Agência: ${getConta.agencia}\n Conta: ${getConta.numero}`) : alert("a")
+      setRedirect(true)
+      } catch (error) {
       console.error("Failed to create client:", error);
     }
   }

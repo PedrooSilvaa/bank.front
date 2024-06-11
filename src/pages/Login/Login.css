@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #A7A6A7;
 }
 
 .containerLogin form{
@@ -11,8 +11,8 @@
     height: 50%;
     display: flex;
     flex-direction: column;
-    background-color: #4b4b4b;
-    color: #fff;
+    background-color: #000;
+    color: #0CCE42;
     padding: 50px;
     text-align: start;
     align-items: center;
@@ -24,7 +24,7 @@
 
 .containerLogin form label input {
     padding: 5px;
-    color: #a7a7a7;
+    color: #fff;
     background-color: transparent;
     border: none;
     border-bottom: 1px #fff solid;
@@ -44,7 +44,7 @@
 .submitLogin {
     width: 50%;
     border: none;
-    background-color: #dadada;
+    background-color: #0CCE42;
     color: #000000;
     font-size: 15px;
     font-weight: 900;

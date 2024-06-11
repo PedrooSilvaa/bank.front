@@ -1,11 +1,11 @@
-import { getClienteByCpf } from '../../helpers/BankRequest'
+import { getContaByNumero } from '../../helpers/BankRequest'
 import './Login.css'
 import { useState } from 'react'
 import { Navigate, NavLink } from 'react-router-dom';
 
 const Login = () => {
     const [id, setId] = useState()
-    const [cpf, setCpf] = useState()
+    const [numero, setNumero] = useState()
     const [password, setPassword] = useState()
     const [redirect, setRedirect] = useState(false);
 
@@ -13,11 +13,11 @@ const Login = () => {
         event.preventDefault(); 
 
         try {
-            const data = await getClienteByCpf(cpf, password);
-            setId(data.id)
+            const data = await getContaByNumero(numero, password);
+            setId(data.id_cliente)
             setRedirect(true);
         } catch (error) {
-            alert("Password Incorrect");
+            alert("Count or Password Incorrect");
         }
     }
 
@@ -31,8 +31,8 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
                 <h1>Log in to the account</h1>
                 <label>
-                    CPF
-                    <input type="text" onChange={(e) => setCpf(e.target.value)}/>
+                    Conta
+                    <input type="number" onChange={(e) => setNumero(e.target.value)}/>
                 </label>
                 <label>
                     Password

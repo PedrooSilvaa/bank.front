@@ -1,0 +1,29 @@
+.containerUsuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    justify-content: space-around;
+    background-color: #0CCE42;
+    color: white;
+    width: 300px;
+    height: 100vh;
+    padding: 0 20px;
+
+    h3{
+        font-weight: 900;
+        margin: 0;
+    }
+}
+
+.headerUsuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+}
+
+.headerUsuario img {
+    height: 40px;
+}
+
