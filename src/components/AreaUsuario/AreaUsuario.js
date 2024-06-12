@@ -12,7 +12,6 @@ const AreaUsuario = ({nomeUsuario, numeroAgencia, numeroConta}) => {
             <img src={User} alt="" />
         </div>
         <div className="mainUsuario">
-          <h3>Wallet</h3>
           <CardUsuario numeroAgencia={numeroAgencia} numeroConta={numeroConta}/>
         </div>
 

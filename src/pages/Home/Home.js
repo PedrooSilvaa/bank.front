@@ -1,9 +1,11 @@
 import { useSearchParams } from "react-router-dom";
 import { getClienteById, getContaByIdCliente } from "../../helpers/BankRequest";
 import { useState, useEffect } from "react";
-import Nav from "../../NavBar/Nav";
+import Nav from "../../components/NavBar/Nav";
 import AreaUsuario from "../../components/AreaUsuario/AreaUsuario";
 import './Home.css'
+import Money from "../../components/MoneyOverview/Money";
+import Transacoes from "../../components/HistoricoTransacoes/Transacoes";
 
 const Home = () => {
 
@@ -35,6 +37,12 @@ const Home = () => {
         {clienteData ? (
         <div className="containerHome">
           <Nav id={id}/>
+
+          <div className="mainHome">
+            <Money saldo={contaData.saldo}/>
+            <Transacoes/>
+          </div>
+
           <AreaUsuario nomeUsuario={clienteData.name} numeroAgencia={contaData.agencia} numeroConta={contaData.numero}/>
         </div>
         

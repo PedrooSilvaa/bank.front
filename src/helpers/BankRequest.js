@@ -82,7 +82,8 @@ export async function getContaByNumero(numero, password) {
             id: responseData.id,
             agencia: responseData.agencia,
             numero: responseData.numero,
-            id_cliente: responseData.id_cliente
+            id_cliente: responseData.id_cliente,
+            saldo: responseData.saldo
         };
 
         return dataObject;
@@ -105,7 +106,8 @@ export async function getContaByIdCliente(id) {
             id: responseData.id,
             agencia: responseData.agencia,
             numero: responseData.numero,
-            id_cliente: responseData.id_cliente
+            id_cliente: responseData.id_cliente,
+            saldo: responseData.saldo
         };
 
         return dataObject;

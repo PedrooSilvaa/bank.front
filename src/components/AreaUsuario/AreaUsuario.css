@@ -6,7 +6,7 @@
     justify-content: space-around;
     background-color: #0CCE42;
     color: white;
-    width: 300px;
+    width: 25%;
     height: 100vh;
     padding: 0 20px;
 
@@ -27,3 +27,7 @@
     height: 40px;
 }
 
+.mainUsuario{
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,16 @@
+.containerTransacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    justify-content: space-around;
+    background-color: #0CCE42;
+    color: white;
+    width: 100%;
+    height: 47vh;
+    padding: 0 10px;
+}
+
+.titleTransacao {
+    font-size: 20px;
+}

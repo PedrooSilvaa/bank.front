@@ -1,6 +1,6 @@
 import React from 'react'
 import './Nav.css'
-import Home from '../assets/home.png'
+import Home from '../../assets/home.png'
 const Nav = ({id}) => {
   return (
     <div className='containerNav'>

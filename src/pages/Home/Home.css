@@ -1,6 +1,16 @@
 .containerHome {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
     background-color: #000;
+}
+
+.mainHome{
+    width: 40%;
+    padding: 0 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
