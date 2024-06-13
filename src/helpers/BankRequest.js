@@ -122,21 +122,24 @@ export async function getContaByIdCliente(id) {
 export async function listTransacoesContas(id) {
     try {
         const responseOne = await baseRequest.get(`/api/bank/transacao/list/origem/${id}`);
-
-        let responseData = responseOne.data;
-        console.log("ppp " + responseData)
-
-        let transacoes = responseData;
-
         const responseTwo = await baseRequest.get(`/api/bank/transacao/list/destino/${id}`);
 
-        responseData = responseTwo.data;
+        let transacoes = [];
 
-        transacoes += responseData;
+        if (Array.isArray(responseOne.data)) {
+            transacoes = transacoes.concat(responseOne.data);
+        } else {
+            console.error('Resposta de /origem não é um array:', responseOne.data);
+        }
 
-        console.log(transacoes)
+        if (Array.isArray(responseTwo.data)) {
+            transacoes = transacoes.concat(responseTwo.data);
+        } else {
+            console.error('Resposta de /destino não é um array:', responseTwo.data);
+        }
+
+        console.log(transacoes);
         return transacoes;
-
     } catch (error) {
         console.error('Erro ao fazer requisição:', error);
         throw error;
