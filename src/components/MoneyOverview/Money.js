@@ -14,7 +14,7 @@ const Money = ({ saldo }) => {
                 R$ {saldoDaConta.toFixed(2)}
             </h3>
             <h3>
-                R$ 00,00
+                R$ 0.00
             </h3>
         </div>
     </div>

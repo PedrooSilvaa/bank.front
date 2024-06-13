@@ -12,26 +12,27 @@ const Home = () => {
     let [searchParams] = useSearchParams();
     const [clienteData, setClienteData] = useState({});
     const [contaData, setContaData] = useState({});
-    const [id, setId] = useState(null);
+    const [id, setId] = useState();
     
 
     useEffect(() => {
-        async function fetchData() {
-    
+      async function fetchData() {
         const idCliente = searchParams.get('id'); 
-
-        if (idCliente) {
-            const data = await getClienteById(idCliente);
-            setId(idCliente)
-            setClienteData(data);
-            const dataConta = await getContaByIdCliente(idCliente);
-            setContaData(dataConta);
-            
-        }
-        }
+        console.log("id cliente " + idCliente)
+        
+        const data = await getClienteById(idCliente);
+        console.log(data)
+        setId(data.id)
+        setClienteData(data);
+        const dataConta = await getContaByIdCliente(idCliente);
+        setContaData(dataConta);
+        
+          }
     
         fetchData();
         }, [searchParams]);
+        
+        
   return (
     <div>
         {clienteData ? (
@@ -40,7 +41,8 @@ const Home = () => {
 
           <div className="mainHome">
             <Money saldo={contaData.saldo}/>
-            <Transacoes/>
+            <Transacoes idCliente={id}/>
+            
           </div>
 
           <AreaUsuario nomeUsuario={clienteData.name} numeroAgencia={contaData.agencia} numeroConta={contaData.numero}/>

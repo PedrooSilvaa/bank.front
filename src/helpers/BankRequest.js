@@ -117,3 +117,46 @@ export async function getContaByIdCliente(id) {
         throw error;
     }
 }
+
+
+export async function listTransacoesContas(id) {
+    try {
+        const responseOne = await baseRequest.get(`/api/bank/transacao/list/origem/${id}`);
+
+        let responseData = responseOne.data;
+        console.log("ppp " + responseData)
+
+        let transacoes = responseData;
+
+        const responseTwo = await baseRequest.get(`/api/bank/transacao/list/destino/${id}`);
+
+        responseData = responseTwo.data;
+
+        transacoes += responseData;
+
+        console.log(transacoes)
+        return transacoes;
+
+    } catch (error) {
+        console.error('Erro ao fazer requisição:', error);
+        throw error;
+    }
+}
+
+
+export async function createNewTransation(tipo, transacao) {
+    try {
+        const response = await baseRequest.post(`/api/bank/transacao/${tipo}`, transacao);
+
+        return response.data;
+
+    } catch (error) {
+        console.error('Erro ao fazer requisição:', error);
+        throw error;
+    }
+}
+
+
+
+
+

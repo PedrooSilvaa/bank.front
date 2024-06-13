@@ -3,6 +3,7 @@ import './App.css';
 import Logon from './pages/CreateLoginCliente/CreateLogin';
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home/Home";
+import CreateTransacao from "./components/CreateTransacao/CreateTransacao";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
           <Route path="/logon" element={<Logon />} />
 
           <Route path="/home" element={<Home />} />
+
+          <Route path="/transacao" element={<CreateTransacao></CreateTransacao>} />
+
 
         </Routes>
       </BrowserRouter>
