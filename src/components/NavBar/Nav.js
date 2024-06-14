@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import './Nav.css'
-
 import { Navigate } from 'react-router-dom';
 
 const Nav = ({id}) => {

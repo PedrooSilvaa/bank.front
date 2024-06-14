@@ -38,7 +38,7 @@ const Transacoes = ({ idCliente }) => {
             <div className='transacoesList'>
                 {transacaoData.map((transacao, index) => (
                     <div key={index} className='transacaoItem'>
-                        <span>{transacao.valor}</span>
+                        <span>R$ {transacao.valor}</span>
                         <span>{transacao.tipo}</span>
                         <span>{formatarData(transacao.data)}</span>
                     </div>

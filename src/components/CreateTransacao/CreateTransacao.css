@@ -1,0 +1,68 @@
+.containerCreateTransacao {
+    background-color: #0CCE42;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formTransacao {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    color: #0CCE42;
+    padding: 50px;
+    text-align: start;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.inputTransacao {
+    padding: 5px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px #fff solid;
+    width: 100%;
+}
+
+.inputTransacao:focus{
+    outline: none;
+}
+
+.formTransacao label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.submitTransacao {
+    width: 50%;
+    border: none;
+    background-color: #0CCE42;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 900;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px 0 ;
+    cursor: pointer;
+} 
+
+.containerCreateTransacao button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.containerCreateTransacao button:hover {
+    text-decoration: underline;
+}

@@ -147,9 +147,9 @@ export async function listTransacoesContas(id) {
 }
 
 
-export async function createNewTransation(tipo, transacao) {
+export async function createNewTransation(tipo, idOrigem, idDestinatario, valor) {
     try {
-        const response = await baseRequest.post(`/api/bank/transacao/${tipo}`, transacao);
+        const response = await baseRequest.post(`/api/bank/transacao/${tipo}/${idOrigem}/${idDestinatario}/${valor}`);
 
         return response.data;
 
